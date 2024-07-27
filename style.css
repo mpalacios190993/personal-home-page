@@ -1,0 +1,89 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.jumbotron2 {
+    position: relative;
+    width: 100%;
+    height: 120vh; 
+    overflow: hidden; 
+}
+
+.banner-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1; 
+}
+
+.container-fluid {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.fb-seccion {
+	min-height: 500px;
+}
+.fb-bgoscuro {
+    background-color: #212121;
+    color: #ffffff;
+  margin-bottom: 100px;
+}
+.fb-bglight {
+    background-color: white;
+    color: #504747;
+}
+.titulo{
+    font-family: 'Titan One';
+    margin-bottom: 50px;
+  margin-top: 10px;
+}
+
+.tarjetas {
+    color: #000000;
+    border-color: #000000;
+    background-color: #DCD9D4;
+    box-shadow: 2px 2px 5px #848484;
+}
+
+.imgaleria img {
+    width: 200px; 
+    min-height: 120px;
+    float: left;
+    margin: 10px;
+    -webkit-transition:all .9s ease;
+    -moz-transition:all .9s ease;
+    -o-transition:all .9s ease;
+    -ms-transition:all .9s ease;
+}
+.imgaleria:hover img {
+    -webkit-transform:scale(0.25);
+    -moz-transform:scale(0.25);
+    -ms-transform:scale(0.25);
+    -o-transform:scale(0.25);
+    transform:scale(0.25);
+}
+
+.card-img-top{
+  height: 350px;
+}
+.card-deck{
+  height: 720px;
+  margin-bottom: 10px;
+}
+.card-tarjetas{
+  margin-bottom: 100px;
+}
+
+.card-deck .card{
+  margin-bottom: 100px;
+  
+}
