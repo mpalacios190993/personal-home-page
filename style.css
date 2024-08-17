@@ -1,89 +1,144 @@
-body, html {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
+.alert{
+    margin-bottom:0 !important;
+}
+
+.card-title{
+    color: #56BED3;
+}
+
+.dark{
+    background: #1C2331 !important;
+}
+
+
+.fb-bgoscuro{
+    background: #1C2331 !important;
+}
+
+.navbar {
+    background-color: #1C2331;
+}
+
+.navbar-brand {
+    font-weight: bold;
+}
+
+.navbar-brand .fas {
+    font-size: 1.5em;
+    color: #56BED3;
+}
+
+.navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,..."); /* icono del navbar */
+}
+
+.navbar-nav .nav-item .nav-link {
+    color: #fff;
 }
 
 .jumbotron2 {
     position: relative;
-    width: 100%;
-    height: 120vh; 
-    overflow: hidden; 
+    padding: 0;
+    margin: 0;
 }
 
-.banner-image {
+.jumbotron2 img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+}
+
+.midcentrado {
     position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
 }
 
-.container-fluid {
-    position: relative;
-    z-index: 1;
-    text-align: center;
-    top: 50%;
-    transform: translateY(-50%);
+.titulo {
+    font-weight: bold;
+    color:white !important;
 }
+
 .fb-seccion {
-	min-height: 500px;
+    padding: 30px 0;
 }
-.fb-bgoscuro {
-    background-color: #212121;
-    color: #ffffff;
-  margin-bottom: 100px;
-}
+
 .fb-bglight {
     background-color: white;
-    color: #504747;
-}
-.titulo{
-    font-family: 'Titan One';
-    margin-bottom: 50px;
-  margin-top: 10px;
 }
 
-.tarjetas {
-    color: #000000;
-    border-color: #000000;
-    background-color: #DCD9D4;
-    box-shadow: 2px 2px 5px #848484;
+.fb-seccionplus {
+    padding: 20px 0;
 }
 
-.imgaleria img {
-    width: 200px; 
-    min-height: 120px;
-    float: left;
-    margin: 10px;
-    -webkit-transition:all .9s ease;
-    -moz-transition:all .9s ease;
-    -o-transition:all .9s ease;
-    -ms-transition:all .9s ease;
-}
-.imgaleria:hover img {
-    -webkit-transform:scale(0.25);
-    -moz-transform:scale(0.25);
-    -ms-transform:scale(0.25);
-    -o-transform:scale(0.25);
-    transform:scale(0.25);
+.fb-bgoscuro {
+    background-color: #343a40;
+    color: white !important;
 }
 
-.card-img-top{
-  height: 350px;
-}
-.card-deck{
-  height: 720px;
-  margin-bottom: 10px;
-}
-.card-tarjetas{
-  margin-bottom: 100px;
+.card-deck .card {
+    position: relative;
+    margin-bottom: 30px;
 }
 
-.card-deck .card{
-  margin-bottom: 100px;
-  
+.card .card-img-top {
+    width: 100%;
+    height: auto;
 }
+
+.card .card-body,
+.card .card-footer {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s;
+    height: 100px;
+}
+
+.card:hover .card-body,
+.card:hover .card-footer {
+    display: block;
+    opacity: 1;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro semi-transparente */
+    color: white; /* Texto blanco */
+    width: 100%; /* Ajusta al ancho de la tarjeta */
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.card .card-body {
+    top: 100%; /* Muestra el contenido justo debajo de la imagen */
+}
+
+.card .card-footer {
+    bottom: 0;
+}
+
+.card-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco con transparencia */
+    width: 80%;
+    z-index: 10; /* Asegúrate de que esté sobre la imagen */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para darle un poco de profundidad */
+    border-radius: 8px; /* Bordes redondeados */
+    padding: 15px;
+}
+
+.collapse {
+    display: block; /* Para que el contenido esté disponible para calcular la altura */
+    max-height: 0;  /* Altura inicial */
+    overflow: hidden; /* Esconde el contenido que excede la altura */
+    transition: max-height 0.3s ease-out; /* Transición suave */
+}
+
+.collapse.show {
+    max-height: 1000px; /* Se ajustará a una altura suficiente para acomodar el contenido */
+}
+
