@@ -1,7 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-
     var images = document.querySelectorAll('.clickable');
-
     images.forEach(function(image) {
         image.addEventListener('click', function() {
 
@@ -24,7 +22,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 document.addEventListener('DOMContentLoaded', function() {
-
     const images = [
         "https://cdn.masterclassphotographers.com/wp-content/uploads/2021/08/11100845/reinhart-julian-WxM465oM4j4-unsplash.jpg",
         "https://www.dzoom.org.es/wp-content/uploads/2020/01/falsos-mitos-fotografia-equipo-camara-tripode-estabilidad-734x489.jpg",
@@ -54,6 +51,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+
 document.addEventListener('DOMContentLoaded', function() {
     const accordionLinks = document.querySelectorAll('.toggle-collapse');
 
@@ -65,12 +63,11 @@ document.addEventListener('DOMContentLoaded', function() {
             if (target.classList.contains('show')) {
                 target.classList.remove('show');
             } else {
-                // Cerrar cualquier otro acordeón abierto
+
                 document.querySelectorAll('.collapse.show').forEach(function(openItem) {
                     openItem.classList.remove('show');
                 });
                 
-                // Mostrar el acordeón actual
                 target.classList.add('show');
             }
         });
@@ -83,17 +80,15 @@ document.addEventListener('DOMContentLoaded', function() {
     const form = document.querySelector('form');
 
     resetButton.addEventListener('click', function() {
-        // Resetea todos los campos del formulario
         form.reset();
 
-        // Remover las clases de validación
         form.querySelectorAll('.is-valid, .is-invalid').forEach(function(input) {
             input.classList.remove('is-valid', 'is-invalid');
         });
     });
 });
 
-// Evento para agregar imágenes subidas desde el dispositivo
+
 document.getElementById('addImageBtn').addEventListener('click', function() {
     const input = document.getElementById('imageInput');
     const gallery = document.getElementById('portfolioGallery');
@@ -123,7 +118,6 @@ document.getElementById('addImageBtn').addEventListener('click', function() {
     input.value = '';
 });
 
-// Evento para agregar imágenes mediante URL
 document.getElementById('addImageURLBtn').addEventListener('click', function() {
     const input = document.getElementById('imageURLInput');
     const gallery = document.getElementById('portfolioGallery');
@@ -146,5 +140,41 @@ document.getElementById('addImageURLBtn').addEventListener('click', function() {
     gallery.appendChild(imgDiv);
 
     input.value = '';
+});
+
+
+
+let list = ['Adobe Stock', 'Barcelona Photographer', 'Magnumphotos', 'Lolagarciaphotography'];
+let links = ['https://stock.adobe.com/', 'https://barcelonaphotographer.com/', 'https://www.magnumphotos.com/photographers/', 'https://www.lolagarciaphotography.com/'];
+
+window.onload = function() {
+    let element_list = document.getElementById('list');
+
+    while (list.length) {
+        let new_li = document.createElement('li');
+
+        let new_a = document.createElement('a');
+        new_a.innerText = list.shift();
+        new_a.href = links.shift();
+        new_a.target = "_blank";
+        new_li.appendChild(new_a);
+        element_list.appendChild(new_li);
+    }
+};
+
+
+
+document.querySelector('.navbar-toggler').addEventListener('click', function() {
+    let navbarCollapse = document.getElementById('barranav');
+    let togglerIcon = this.querySelector('.navbar-toggler-icon');
+    let closeIcon = this.querySelector('.close-icon');
+    
+    if (navbarCollapse.classList.contains('show')) {
+        togglerIcon.style.display = 'block';
+        closeIcon.style.display = 'none';
+    } else {
+        togglerIcon.style.display = 'none';
+        closeIcon.style.display = 'block';
+    }
 });
 

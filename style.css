@@ -15,30 +15,7 @@
     background: #1C2331 !important;
 }
 
-.navbar {
-    background-color: #1C2331;
-}
 
-.navbar-brand {
-    font-weight: bold;
-}
-
-.navbar-brand .fas {
-    font-size: 1.5em;
-    color: #56BED3;
-}
-
-.navbar-toggler {
-    border-color: rgba(255, 255, 255, 0.1);
-}
-
-.navbar-toggler-icon {
-    background-image: url("data:image/svg+xml,..."); /* icono del navbar */
-}
-
-.navbar-nav .nav-item .nav-link {
-    color: #fff;
-}
 
 .jumbotron2 {
     position: relative;
@@ -134,7 +111,7 @@
 .collapse {
     display: block; /* Para que el contenido esté disponible para calcular la altura */
     max-height: 0;  /* Altura inicial */
-    overflow: hidden; /* Esconde el contenido que excede la altura */
+     /* Esconde el contenido que excede la altura */
     transition: max-height 0.3s ease-out; /* Transición suave */
 }
 
@@ -142,3 +119,46 @@
     max-height: 1000px; /* Se ajustará a una altura suficiente para acomodar el contenido */
 }
 
+
+
+
+
+
+
+
+.navbar {
+    background-color: #1C2331;
+    padding: 10px;
+}
+.navbar-toggler {
+    border: none;
+    outline: none;
+}
+.navbar-collapse {
+    display: none;
+    background-color: #1C2331;
+}
+.navbar-collapse.show {
+    display: block;
+}
+.nav-link {
+    color: white;
+    padding: 10px;
+}
+.nav-link:hover {
+    color: #56BED3;
+}
+.navbar-brand {
+    color: white;
+    font-weight: bold;
+}
+
+.close-icon {
+    font-size: 1.5em;
+    color: #56BED3;
+}
+
+.navbar-toggler-icon {
+    font-size: 1.5em;
+    color: white;
+}
